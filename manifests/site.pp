@@ -58,9 +58,31 @@ node default {
   include hub
   include nginx
   include java
-#  include zsh
+  include zsh
   include wget
   include virtualbox
+  include python
+
+  # Vim and pathogen plugins
+  include vim
+  vim::bundle { [
+    'scrooloose/nerdtree',
+    'croaker/mustang-vim',
+    'vim-scripts/paredit.vim',
+    'edkolev/promptline.vim',
+    'kien/rainbow_parentheses.vim',
+    'edkolev/tmuxline.vim',
+    'bling/vim-airline',
+    'tpope/vim-classpath',
+    'guns/vim-clojure-static',
+    'altercation/vim-colors-solarized',
+    'tpope/vim-fireplace',
+    'tpope/vim-fugitive',
+    'airblade/vim-gitgutter',
+    'mhinz/vim-signify'
+  ]: }
+
+
 
   # from the stable channel
   include chrome
