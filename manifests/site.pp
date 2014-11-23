@@ -65,6 +65,7 @@ node default {
   include tmux
   include docker
   include python
+  include skype
 
   class { 'vagrant': }
 
