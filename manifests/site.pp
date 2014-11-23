@@ -62,6 +62,7 @@ node default {
   include wget
   include virtualbox
   include clojure
+  include tmux
   include docker
   include python
 
