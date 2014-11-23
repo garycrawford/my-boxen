@@ -61,6 +61,7 @@ github "xquartz",     "1.2.1"
 # https://github.com/boxen.
 github "chrome",      "1.2.0"
 github "java",        "1.7.1"
+github "clojure",     "1.3.0"
 github "osx",         "2.8.0"
 github "zsh",         "1.0.0"
 github "wget",        "1.0.1"

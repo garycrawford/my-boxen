@@ -61,6 +61,7 @@ node default {
   include zsh
   include wget
   include virtualbox
+  include clojure
   include python
 
   # Vim and pathogen plugins
@@ -81,8 +82,6 @@ node default {
     'airblade/vim-gitgutter',
     'mhinz/vim-signify'
   ]: }
-
-
 
   # from the stable channel
   include chrome

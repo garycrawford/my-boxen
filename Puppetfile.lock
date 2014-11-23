@@ -9,6 +9,11 @@ GITHUBTARBALL
     chrome (1.2.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-clojure
+  specs:
+    clojure (1.3.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
     dnsmasq (2.0.0)
@@ -141,6 +146,7 @@ GITHUBTARBALL
 DEPENDENCIES
   boxen (= 3.7.0)
   chrome (= 1.2.0)
+  clojure (= 1.3.0)
   dnsmasq (= 2.0.0)
   foreman (= 1.2.0)
   gcc (= 2.2.0)
