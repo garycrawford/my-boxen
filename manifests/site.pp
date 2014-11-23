@@ -62,6 +62,7 @@ node default {
   include wget
   include virtualbox
   include clojure
+  include docker
   include python
 
   class { 'vagrant': }
