@@ -57,6 +57,13 @@ node default {
   include git
   include hub
   include nginx
+  include java
+#  include zsh
+  include wget
+  include virtualbox
+
+  # from the stable channel
+  include chrome
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
