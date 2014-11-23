@@ -64,6 +64,8 @@ node default {
   include clojure
   include python
 
+  class { 'vagrant': }
+
   # Vim and pathogen plugins
   include vim
   vim::bundle { [
