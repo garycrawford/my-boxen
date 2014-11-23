@@ -96,3 +96,30 @@ node default {
     target => $boxen::config::repodir
   }
 }
+
+#
+#  DOTFILES
+#
+repository { 'dotfiles':
+  source => 'garycrawford/dotfiles',
+  path   => "/Users/${::boxen_user}/.dotfiles"
+}
+repository { 'oh-my-zsh':
+  source => 'robbyrussell/oh-my-zsh',
+  path   => "/Users/${::boxen_user}/.oh-my-zsh"
+}
+file { "/Users/${::boxen_user}/.zshrc":
+  ensure  => link,
+  target  => "/Users/${::boxen_user}/.dotfiles/zsh/.zshrc",
+  require => [ Repository['oh-my-zsh'], Repository['dotfiles'] ]
+}
+file { "/Users/${::boxen_user}/.vimrc":
+  ensure  => link,
+  target  => "/Users/${::boxen_user}/.dotfiles/vim/.vimrc",
+  require => [ Repository['dotfiles'] ]
+}
+file { "/Users/${::boxen_user}/.tmux.conf":
+  ensure  => link,
+  target  => "/Users/${::boxen_user}/.dotfiles/tmux/.tmux.conf",
+  require => [ Repository['dotfiles'] ]
+}
