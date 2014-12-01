@@ -66,6 +66,7 @@ node default {
   include docker
   include python
   include skype
+  include ansible
 
   class { 'vagrant': }
 
@@ -85,7 +86,8 @@ node default {
     'tpope/vim-fireplace',
     'tpope/vim-fugitive',
     'airblade/vim-gitgutter',
-    'mhinz/vim-signify'
+    'mhinz/vim-signify',
+    'guns/vim-clojure-highlight'
   ]: }
 
   # from the stable channel
