@@ -67,6 +67,7 @@ node default {
   include python
   include skype
   include ansible
+  include evernote
 
   class { 'vagrant': }
 
