@@ -71,6 +71,11 @@ node default {
 
   class { 'vagrant': }
 
+  class { 'intellij':
+    edition => 'community',
+    version => '14.0.2'
+  }
+
   # Vim and pathogen plugins
   include vim
   vim::bundle { [
