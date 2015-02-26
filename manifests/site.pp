@@ -68,6 +68,7 @@ node default {
   include skype
   include ansible
   include evernote
+  include rabbitmq
 
   class { 'vagrant': }
 
