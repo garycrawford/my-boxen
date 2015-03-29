@@ -69,6 +69,7 @@ node default {
   include ansible
   include evernote
   include rabbitmq
+  include elasticsearch
 
   class { 'vagrant': }
 
@@ -94,6 +95,7 @@ node default {
     'tpope/vim-fugitive',
     'airblade/vim-gitgutter',
     'mhinz/vim-signify',
+    'mustache/vim-mustache-handlebars',
     'guns/vim-clojure-highlight'
   ]: }
 
