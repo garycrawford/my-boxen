@@ -69,6 +69,7 @@ node default {
   include ansible
   include evernote
   include rabbitmq
+  include mongodb
   include elasticsearch
 
   class { 'vagrant': }
