@@ -125,7 +125,11 @@ node default {
     [
       'ack',
       'findutils',
-      'gnu-tar'
+      'gnu-tar',
+      'scala',
+      'sbt',
+      'zookeeper',
+      'mesos'
     ]:
   }
 
