@@ -60,18 +60,16 @@ github "xquartz",     "1.2.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
-
 github "chrome",        "1.2.0"
 github "java",          "1.8.4"
 github "clojure",       "1.6.0"
 github "osx",           "2.8.0"
-github "zsg",           "1.0.0"
+github "zsh",           "1.0.0"
 github "wget",          "1.0.1"
 github "virtualbox",    "1.0.13"
 github "python",        "2.0.1"
 github "vim",           "1.0.5"
 github "vagrant",       "3.3.3"
-github "module-data",   "0.0.4", :repo => "ripienaar/puppet-module-data"
 github "docker",        "0.9.0"
 github "tmux",          "1.0.2"
 github "skype",         "1.1.0"
