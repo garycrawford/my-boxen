@@ -57,6 +57,51 @@ node default {
   include git
   include hub
   include nginx
+  include java
+  include zsh
+  include wget
+  include virtualbox
+  include clojure
+  include tmux
+  include docker
+  include python
+  include skype
+  include ansible
+  include evernote
+  include rabbitmq
+  include mongodb
+  include elasticsearch
+
+  class { 'vagrant': }
+
+  class { 'intellij':
+    edition => 'community',
+    version => '14.0.2'
+  }
+
+  # Vim and pathogen plugins
+  include vim
+  vim::bundle { [
+    'scrooloose/nerdtree',
+    'croaker/mustang-vim',
+    'vim-scripts/paredit.vim',
+    'edkolev/promptline.vim',
+    'kien/rainbow_parentheses.vim',
+    'edkolev/tmuxline.vim',
+    'bling/vim-airline',
+    'tpope/vim-classpath',
+    'guns/vim-clojure-static',
+    'altercation/vim-colors-solarized',
+    'tpope/vim-fireplace',
+    'tpope/vim-fugitive',
+    'airblade/vim-gitgutter',
+    'mhinz/vim-signify',
+    'mustache/vim-mustache-handlebars',
+    'guns/vim-clojure-highlight'
+  ]: }
+
+  # from the stable channel
+  include chrome
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
@@ -80,7 +125,11 @@ node default {
     [
       'ack',
       'findutils',
-      'gnu-tar'
+      'gnu-tar',
+      'scala',
+      'sbt',
+      'zookeeper',
+      'mesos'
     ]:
   }
 
@@ -88,4 +137,31 @@ node default {
     ensure => link,
     target => $boxen::config::repodir
   }
+}
+
+#
+#  DOTFILES
+#
+repository { 'dotfiles':
+  source => 'garycrawford/dotfiles',
+  path   => "/Users/${::boxen_user}/.dotfiles"
+}
+repository { 'oh-my-zsh':
+  source => 'robbyrussell/oh-my-zsh',
+  path   => "/Users/${::boxen_user}/.oh-my-zsh"
+}
+file { "/Users/${::boxen_user}/.zshrc":
+  ensure  => link,
+  target  => "/Users/${::boxen_user}/.dotfiles/zsh/.zshrc",
+  require => [ Repository['oh-my-zsh'], Repository['dotfiles'] ]
+}
+file { "/Users/${::boxen_user}/.vimrc":
+  ensure  => link,
+  target  => "/Users/${::boxen_user}/.dotfiles/vim/.vimrc",
+  require => [ Repository['dotfiles'] ]
+}
+file { "/Users/${::boxen_user}/.tmux.conf":
+  ensure  => link,
+  target  => "/Users/${::boxen_user}/.dotfiles/tmux/.tmux.conf",
+  require => [ Repository['dotfiles'] ]
 }
