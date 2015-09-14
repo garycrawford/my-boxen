@@ -75,8 +75,7 @@ node default {
   class { 'vagrant': }
 
   class { 'intellij':
-    edition => 'community',
-    version => '14.0.2'
+    edition => 'community'
   }
 
   # Vim and pathogen plugins

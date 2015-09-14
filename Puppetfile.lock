@@ -31,7 +31,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-elasticsearch
   specs:
-    elasticsearch (2.9.0)
+    elasticsearch (2.8.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-evernote
@@ -69,11 +69,6 @@ GITHUBTARBALL
     hub (1.4.1)
 
 GITHUBTARBALL
-  remote: boxen/puppet-intellij
-  specs:
-    intellij (1.5.1)
-
-GITHUBTARBALL
   remote: boxen/puppet-java
   specs:
     java (1.8.4)
@@ -92,11 +87,6 @@ GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
     nodejs (5.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-onepassword
-  specs:
-    onepassword (1.1.5)
 
 GITHUBTARBALL
   remote: boxen/puppet-openssl
@@ -189,6 +179,11 @@ GITHUBTARBALL
     ansible (0.0.1)
 
 GITHUBTARBALL
+  remote: mavant/puppet-intellij
+  specs:
+    intellij (1.5.3)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.4.1)
@@ -211,7 +206,7 @@ DEPENDENCIES
   clojure (= 1.3.0)
   dnsmasq (= 2.0.1)
   docker (= 0.9.0)
-  elasticsearch (= 2.9.0)
+  elasticsearch (= 2.8.0)
   evernote (= 2.0.4)
   foreman (= 1.2.0)
   gcc (= 3.0.2)
@@ -220,13 +215,12 @@ DEPENDENCIES
   homebrew (= 1.13.0)
   hub (= 1.4.1)
   inifile (= 1.4.1)
-  intellij (= 1.5.1)
+  intellij (= 1.5.3)
   java (= 1.8.4)
   module_data (= 0.0.4)
   mongodb (= 1.3.4)
   nginx (= 1.4.6)
   nodejs (= 5.0.0)
-  onepassword (= 1.1.5)
   openssl (= 1.0.0)
   osx (= 2.8.0)
   phantomjs (= 3.0.0)
