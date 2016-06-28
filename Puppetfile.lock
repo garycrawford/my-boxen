@@ -31,7 +31,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-elasticsearch
   specs:
-    elasticsearch (2.9.0)
+    elasticsearch (2.8.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-evernote
@@ -206,7 +206,7 @@ DEPENDENCIES
   clojure (= 1.3.0)
   dnsmasq (= 2.0.1)
   docker (= 1.0.0)
-  elasticsearch (= 2.9.0)
+  elasticsearch (= 2.8.0)
   evernote (= 2.0.4)
   foreman (= 1.2.0)
   gcc (= 3.0.2)
