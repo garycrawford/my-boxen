@@ -96,7 +96,13 @@ node default {
     'airblade/vim-gitgutter',
     'mhinz/vim-signify',
     'mustache/vim-mustache-handlebars',
-    'guns/vim-clojure-highlight'
+    'guns/vim-clojure-highlight',
+    'pangloss/vim-javascript',
+    'ternjs/tern_for_vim',
+    'junegunn/vim-easy-align',
+    'helino/vim-json',
+    'PeterRincker/vim-argumentative',
+    'Valloric/YouCompleteMe'
   ]: }
 
   # from the stable channel
